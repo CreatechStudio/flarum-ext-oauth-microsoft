@@ -40,16 +40,26 @@ class Microsoft extends Provider
         return [
             'client_id'     => 'required',
             'client_secret' => 'required',
+            'tenant_id'     => '',
         ];
     }
 
     public function provider(string $redirectUri): AbstractProvider
     {
-        return $this->provider = new MicrosoftProvider([
+        $config = [
             'clientId'     => $this->getSetting('client_id'),
             'clientSecret' => $this->getSetting('client_secret'),
             'redirectUri'  => $redirectUri,
-        ]);
+        ];
+
+        // Add tenant support for enterprise apps
+        $tenantId = $this->getSetting('tenant_id');
+        if (!empty($tenantId)) {
+            $config['urlAuthorize'] = 'https://login.microsoftonline.com/' . $tenantId . '/oauth2/v2.0/authorize';
+            $config['urlAccessToken'] = 'https://login.microsoftonline.com/' . $tenantId . '/oauth2/v2.0/token';
+        }
+
+        return $this->provider = new MicrosoftProvider($config);
     }
 
     public function suggestions(Registration $registration, $user, string $token)

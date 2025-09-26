@@ -3,11 +3,11 @@ fof-oauth:
     settings:
       providers:
         microsoft:
-          description: Register your forum with Microsoft {link}
+          description: 在 Microsoft {link} 注册你的论坛
 
           client_id_label: => fof-oauth.ref.settings.client_id
           client_secret_label: => fof-oauth.ref.settings.client_secret
-          tenant_id_label: Tenant ID (Optional - for enterprise apps)
+          tenant_id_label: 租户 ID (可选 - 用于企业应用)
 
   forum:
     log_in:

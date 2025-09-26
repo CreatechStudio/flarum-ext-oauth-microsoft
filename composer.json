@@ -1,5 +1,5 @@
 {
-    "name": "xrh0905/oauth-microsoft",
+    "name": "createchstudio/oauth-microsoft",
     "description": "Log in to your Flarum forum with Microsoft",
     "keywords": [
         "flarum", "microsoft", "sso", "oauth", "login"
@@ -7,9 +7,8 @@
     "type": "flarum-extension",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/xrh0905/flarum-ext-oauth-microsoft/issues",
-        "source": "https://github.com/xrh0905/flarum-ext-oauth-microsoft",
-        "forum": "https://example.com"
+        "issues": "https://github.com/createchstudio/flarum-ext-oauth-microsoft/issues",
+        "source": "https://github.com/createchstudio/flarum-ext-oauth-microsoft"
     },
     "require": {
         "flarum/core": "^1.2.0",
@@ -17,6 +16,10 @@
         "stevenmaguire/oauth2-microsoft": "^2.2"
     },
     "authors": [
+        {
+            "name": "CreatechStudio",
+            "homepage": "https://github.com/createchstudio"
+        },
         {
             "name": "xrh0905",
             "homepage": "https://github.com/xrh0905"

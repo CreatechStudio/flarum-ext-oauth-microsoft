@@ -23,7 +23,10 @@ composer update xrh0905/oauth-microsoft
 ## Setup
 1) Register your site with [Microsoft](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow) and obtain your unique `client_id` and `client_secret`
 2) Once you have created your security profile for your forum, go to `Web Settings` and enter the redirect URL as provided in this extension's settings page.
-3) Log in with Microsoft!
+3) **For Enterprise Applications**: If you're using a tenant-specific application (not a multi-tenant public app), enter your Azure AD Tenant ID in the optional "Tenant ID" field. This allows authentication within your organization only.
+   - You can find your Tenant ID in the Azure Portal under Azure Active Directory > Properties > Tenant ID
+   - Leave this field empty for public multi-tenant applications
+4) Log in with Microsoft!
 
 ## Links
 
